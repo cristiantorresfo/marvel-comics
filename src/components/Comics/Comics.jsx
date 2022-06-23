@@ -6,9 +6,7 @@ const Comics = () => {
 
     const {comicsList} = useContext(ComicsContext);
 
-    comicsList.forEach(element => {
-        console.log(element);
-    });
+    
   return (<div className="row">
   {comicsList.map((comic, idx) => {
     return (

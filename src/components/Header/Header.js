@@ -1,4 +1,5 @@
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { logout } from "../../firebase";
 import Buscador from "../Buscador/Buscador";
 import "./Header.css";
 
@@ -30,7 +31,6 @@ function Header() {
               <p className="nav-link" href="#">
                 Pricing
               </p>
-              
             </div>
           </div>
           {/* <Link className="navbar-brand" to="/" >MovieFlix</Link>
@@ -52,6 +52,9 @@ function Header() {
                        </ul>
                    </div> */}
           <Buscador />
+          <Link to="/">
+            <button onClick={logout}>logout</button>
+          </Link>
         </div>
       </nav>
     </header>

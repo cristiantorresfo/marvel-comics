@@ -1,3 +1,4 @@
+import './Comics.css'
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import { ComicsContext } from '../../contexts/ComicsContext';
@@ -7,7 +8,9 @@ const Comics = () => {
     const {comicsList} = useContext(ComicsContext);
 
     
-  return (<div className="row">
+  return (
+  <div className='comics'>
+  <div className="row">
   {comicsList.map((comic, idx) => {
     return (
         <div className="col-3" key={idx}>
@@ -22,11 +25,12 @@ const Comics = () => {
               <Link to={`/detalle?comicID=${comic.id}`} className="btn btn-primary">
                 View detail
               </Link>
-            </div> 
+            </div>             
           </div>
         </div>
     );
   })}
+  </div>
   </div>
   )
 }

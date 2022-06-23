@@ -1,6 +1,7 @@
 
-
 .LogInGoogle {
+    position: relative;
+    height: 100vh;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -8,8 +9,19 @@
     justify-content: center;
 }
 
+.LogInGoogle::after{
+    content: "";
+    background-color: rgb(20, 20, 20);
+position: absolute;
+top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  z-index: -1;
+}
+
 .LogInGoogle>img{
-    width: 31.25rem;
+    width: 30.25rem;
 }
 
 
@@ -19,17 +31,17 @@
 }
 
 .LogInGoogle p:first-child {
-    font-family: silkscreen;
+    font-family:'Fira Code', monospace;;
     font-weight: 700;
-    font-size: 3.125rem;
-    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
     margin-bottom: 2.3125rem;
 }
 
 .LogInGoogle p:nth-child(2) {
     font-family: 'Fira Code', monospace;
-    font-weight: 450;
-    font-size: 1.5rem;
+    font-weight: 700;
+    font-size: 2rem;
     line-height: 1.5rem;
     color: #fff;
     margin-bottom: 2.3125rem;
@@ -90,12 +102,7 @@
 
 @media screen and (max-width: 950px) {
     
-    .initialContainer{
-      flex-direction: column;
-    }
-    .LogInGoogle{
-        height: max-content;
-        margin-top: 12.1875rem;
+     .LogInGoogle{
         text-align: center;
     }
   }

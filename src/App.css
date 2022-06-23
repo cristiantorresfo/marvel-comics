@@ -1,6 +1,18 @@
-.App{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between ;
-  background-color: rgb(212, 79, 79);
+.App {
+  width: 100%;
+  display: block; 
+  position: relative;}
+
+.App::after {
+  content: ""; 
+  background: url('../public/images/fondo.jpg'); 
+  background-repeat:repeat;
+  opacity: 0.6; 
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0; 
+  position: absolute; 
+  z-index: -1; 
+  
 }

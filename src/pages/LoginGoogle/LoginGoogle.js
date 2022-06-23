@@ -2,7 +2,7 @@ import './LoginGoogle.css'
 import { useContext } from "react";
 import { Navigate, Link } from "react-router-dom";
 import { UserContext } from "../../contexts/UserContext";
-import { addUser, logInWithGoogle, logout } from "../../firebase";
+import { addUser, logInWithGoogle } from "../../firebase";
 
 
 const LoginGoogle = () => {
@@ -24,21 +24,31 @@ const LoginGoogle = () => {
     : addUser(newUser) 
   }
   return (
+    <div className='loginContainer'>
+
     <div className="LogInGoogle">
-    <p>Welcome to Cristian's social network</p>
-    <p>Comparte tus opiniones y pensamientos e interactúa con los posts de los demás usuarios</p>
-    <br />
-    
-      <div className="LogIn" onClick={logInWithGoogle}>
+    <p>Binvenido/a, <br/> Busca tus comics de Marvel favoritos</p>
+    <p>Por favor, inicia sesión para continuar</p>
+    <img src='./images/marvel-logo.png' alt='logoMarvel'/>
+    <br /> 
+    {
+      userLog.uid.length === 0 ? 
+<div className="LogIn" onClick={logInWithGoogle}>
         <div className="googleLogo">
           <img src="./images/googleLogo.svg" alt="" />
         </div>
         <button className="login-btn">Sign in with Google</button>
       </div>
-    <Link to = {newUser.uid.length !== 0 && "/main"} > 
+      : 
+      <Link to = {newUser.uid.length !== 0 && "/main"} > 
      <button onClick={handleSubmitUser}>Continuar</button>/
     </Link>
 
+    }   
+      
+    
+
+    </div>
     </div>
 
   )

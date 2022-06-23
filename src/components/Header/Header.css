@@ -1,0 +1,23 @@
+
+nav.navHeader { 
+
+    border: 2px saddlebrown solid;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.navHeader p{
+    display: flex;
+    padding: 0 50px;
+    margin: 0;
+}
+
+.navHeader p{
+    margin-right: 50px;
+    list-style: none;
+}
+
+.navHeader p{
+    text-decoration: none;
+    color:#fff;
+}

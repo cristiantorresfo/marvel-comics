@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <Routes>
           <Route exact path="/" element={<LoginGoogle />} />
-          <Route path='/main' element={<Main/>} />
+          <Route path="/main/*" element={<Main/>} />
       </Routes>
     </div>
   );

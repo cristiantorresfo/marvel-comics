@@ -41,7 +41,7 @@ const LoginGoogle = () => {
       </div>
       : 
       <Link to = {newUser.uid.length !== 0 && "/main"} > 
-     <button onClick={handleSubmitUser}>Continuar</button>/
+     <button className="btn btn-primary" onClick={handleSubmitUser}>Continuar</button>/
     </Link>
 
     }   

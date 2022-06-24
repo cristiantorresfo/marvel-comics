@@ -15,14 +15,11 @@ const Comics = () => {
     return (
         <div className="col-3" key={idx}>
           <div className="card">
-             <img src={`${comic.thumbnail.path}/portrait_medium.${comic.thumbnail.extension}`} className="card-img-top" alt="..." />
+             <img src={`${comic.thumbnail.path}/portrait_incredible.${comic.thumbnail.extension}`} className="card-img-top" alt="..." />
             <button  data-comic-id={comic.id} className="favorite-btn">🖤</button> 
              <div className="card-body">
-              <h5 className="card-title">{comic.name}...</h5>
-              <p className="card-text">
-                {comic.name}...
-              </p>
-              <Link to={`/detalle?comicID=${comic.id}`} className="btn btn-primary">
+              <h5 className="card-title">{comic.title.substring(0, 20)}...</h5>
+              <Link to={`/main/detalle?comicId=${comic.id}`} className="btn btn-primary">
                 View detail
               </Link>
             </div>             

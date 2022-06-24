@@ -5,13 +5,12 @@ import "./Header.css";
 
 function Header() {
   return (
-    <header>
+    <header className="navHeader">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
-          <Link to="/main" > 
+          <Link className="link" to="/main">
             <p className="navbar-brand">Comics Marvel</p>
           </Link>
-         
           <button
             className="navbar-toggler"
             type="button"
@@ -25,24 +24,19 @@ function Header() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <p className="nav-link active" aria-current="page" href="#">
-                Home
-              </p>
-              <p className="nav-link" href="#">
-                Favoritos
-              </p>
-              <p className="nav-link" href="#">
-                Pricing
-              </p>
+              <Link className="link" to="/main/favorites">
+                <p className="nav-link">Favoritos</p>
+              </Link>
             </div>
           </div>
-          
+
           <Buscador />
-          
+
           <Link to="/">
-            <button className="btn btn-danger" onClick={logout}>Log out</button>
+            <button className="btn btn-danger" onClick={logout}>
+              Log out
+            </button>
           </Link>
-          
         </div>
       </nav>
     </header>

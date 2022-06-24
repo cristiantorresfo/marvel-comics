@@ -11,15 +11,13 @@ export const UserContext = createContext();
 export const UserProvider = ({ children }) => {
   const [userLog, setUserLog] = useState(USER_INITIAL);
   const [users, setUsers] = useState([]);
-  
-
 
   useEffect(() => {
     const unsub = onSnapshot(collection(db, "users"), (snapshot) => {
       const usersData = snapshot.docs.map(
         (doc) => {
           return {
-            id: doc.id,            
+            id: doc.id,
             uid: doc.data().uid,
             favorites: doc.data().favorites,
           };
@@ -36,7 +34,6 @@ export const UserProvider = ({ children }) => {
     };
   }, [setUsers]);
 
-
   return (
     <UserContext.Provider
       value={{
@@ -44,7 +41,7 @@ export const UserProvider = ({ children }) => {
         setUserLog,
         USER_INITIAL,
         users,
-        setUsers
+        setUsers,
       }}
     >
       {children}

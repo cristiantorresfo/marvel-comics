@@ -3,7 +3,8 @@ import {
   getFirestore,
   collection,
   addDoc,
-  
+  doc,
+  updateDoc,
 } from "firebase/firestore";
 import {
   getAuth,
@@ -19,7 +20,7 @@ const firebaseConfig = {
   projectId: "comics-marvel-97ebf",
   storageBucket: "comics-marvel-97ebf.appspot.com",
   messagingSenderId: "258281637192",
-  appId: "1:258281637192:web:9427452405140088a8df7d"
+  appId: "1:258281637192:web:9427452405140088a8df7d",
 };
 
 // Initialize Firebase
@@ -37,5 +38,14 @@ export async function addUser(user) {
     await addDoc(collection(db, "users"), user);
   } catch (e) {
     console.error("Error adding document: ", e);
+  }
+}
+export async function updateUser(id, newData) {
+  const userRef = doc(db, "users", id);
+
+  try {
+    await updateDoc(userRef, newData);
+  } catch (e) {
+    console.log("Error al actualizar el user", e);
   }
 }

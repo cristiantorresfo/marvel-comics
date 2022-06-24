@@ -1,8 +1,11 @@
-.comics{
-    padding: 1.65rem;
-   
+.comics {
+  padding: 3.65rem;
 }
 
 .card {
-    margin-bottom: 0.825rem;
+  margin-bottom: 0.825rem;
+}
+
+button:not(:disabled) {
+  background-color: black;
 }

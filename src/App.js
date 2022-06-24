@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     const unsubscribeAuth = auth.onAuthStateChanged((user) => {
-      setUserLog(user || USER_INITIAL);
+      setUserLog(user|| USER_INITIAL);
     });
     return () => {
       unsubscribeAuth();

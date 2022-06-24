@@ -1,0 +1,9 @@
+.favorites {
+    padding: 2.875rem;
+    color: antiquewhite;
+    max-height: none;
+}
+
+.favorites .card-title{
+    color: black;
+}

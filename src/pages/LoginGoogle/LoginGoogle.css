@@ -1,108 +1,104 @@
-
 .LogInGoogle {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.LogInGoogle::after{
-    content: "";
-    background-color: rgb(20, 20, 20);
-position: absolute;
-top: 0; 
-  left: 0; 
-  bottom: 0; 
+.LogInGoogle::after {
+  content: "";
+  background-color: rgb(20, 20, 20);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   right: 0;
   z-index: -1;
 }
 
-.LogInGoogle>img{
-    width: 30.25rem;
+.LogInGoogle > img {
+  width: 30.25rem;
 }
 
-
 .LogIn {
-    display: flex;
-    cursor: pointer;
+  display: flex;
+  cursor: pointer;
 }
 
 .LogInGoogle p:first-child {
-    font-family:'Fira Code', monospace;;
-    font-weight: 700;
-    font-size: 3rem;
-    color: rgb(255, 255, 255);
-    margin-bottom: 2.3125rem;
+  font-family: "Fira Code", monospace;
+  font-weight: 700;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 2.3125rem;
 }
 
 .LogInGoogle p:nth-child(2) {
-    font-family: 'Fira Code', monospace;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 1.5rem;
-    color: #fff;
-    margin-bottom: 2.3125rem;
-
+  font-family: "Fira Code", monospace;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  color: #fff;
+  margin-bottom: 2.3125rem;
 }
 
 .LogInGoogle p:last-child {
-    font-family: 'Fira Code', monospace;
-    font-weight: 450;
-    font-size: 1.125rem;
-    color: #60265B;
-    margin-top: 10.3125rem;    
+  font-family: "Fira Code", monospace;
+  font-weight: 450;
+  font-size: 1.125rem;
+  color: #60265b;
+  margin-top: 10.3125rem;
 }
 
 .login-btn {
-    width: 22.9375rem;
-    height: 3.625rem;
-    background-color: #4285F4;
-    border-radius: 0px 5px 5px 0px;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-    border: #4285F4;
-    cursor: pointer;
+  width: 22.9375rem;
+  height: 3.625rem;
+  background-color: #4285f4;
+  border-radius: 0px 5px 5px 0px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  border: #4285f4;
+  cursor: pointer;
 }
 
 .login-btn:hover {
-    background-color: #5793f3;
+  background-color: #5793f3;
 }
 
 .googleLogo {
-    background-color: #fff;
-    width: 3.6513rem;
-    height: 3.625rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px 0px 0px 5px;
-    border: solid 3px #4285F4;
+  background-color: #fff;
+  width: 3.6513rem;
+  height: 3.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px 0px 0px 5px;
+  border: solid 3px #4285f4;
 }
 
 .continueBtn {
-    width: 26.5625rem;
-    height: 4.1875rem;
-    background-color: #00DA76;
-    font-family: silkscreen;
-    font-weight: 700;
-    font-size: 1.5rem;
-    cursor: pointer;
+  width: 26.5625rem;
+  height: 4.1875rem;
+  background-color: #00da76;
+  font-family: silkscreen;
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .red {
-    color: rgba(255, 0, 0, 0.781);
+  color: rgba(255, 0, 0, 0.781);
 }
 
 @media screen and (max-width: 950px) {
-    
-     .LogInGoogle{
-        text-align: center;
-    }
+  .LogInGoogle {
+    text-align: center;
   }
+}

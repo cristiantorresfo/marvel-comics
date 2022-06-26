@@ -1,7 +1,6 @@
 import "./Comics.css";
 import React, { useContext } from "react";
 import { ComicsContext } from "../../contexts/ComicsContext";
-import { UserContext } from "../../contexts/UserContext";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Loading from "../Loading/Loading";
 import Card from "../Card/Card";

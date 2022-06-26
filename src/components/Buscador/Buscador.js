@@ -26,6 +26,7 @@ const Buscador = () => {
           type="text"
           name="keyword"
           placeholder="Buscar comics.."
+          autoComplete="off"
         />
       </label>
       <button className="btn btn-success" type="submit">
